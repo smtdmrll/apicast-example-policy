@@ -24,10 +24,10 @@ objects:
     output:
       to:
         kind: ImageStreamTag
-        name: apicast-policy:example
+        name: apicast-policy:latest
     source:
       git:
-        uri: https://github.com/3scale/apicast-example-policy.git
+        uri: https://github.com/smtdmrll/apicast-example-policy.git
         ref: 'master'
       type: Git
     strategy:
@@ -62,7 +62,7 @@ objects:
       images:
         - from:
             kind: ImageStreamTag
-            name: 'apicast-policy:example'
+            name: 'apicast-policy:latest'
           paths:
             # copy policy source code into the new image
             - destinationDir: policies
